@@ -1,0 +1,12 @@
+---
+title: "UseR 2018 - What can you do with drugs? Exploring Pharmaceutical Benefit Scheme prescription drug usage using R"
+author: Dennis Wollersheim
+date:  July 13, 2018
+output: ioslides_presentation
+---
+
+# What can you do with drugs? Exploring Pharmaceutical Benefit Scheme prescription drug usage using R
+
+## Dennis Wollersheim
+## La Trobe University
+
