@@ -1,0 +1,82 @@
+---
+title: "UseR 2018 - What can you do with drugs? Exploring Pharmaceutical Benefit Scheme prescription drug usage using R"
+author: Dennis Wollersheim, Health Information Management, La Trobe University, Melbourne VIC Australia
+date:  July 13, 2018
+output:
+    xaringan::moon_reader
+---
+#Data is beautiful
+  * So much data!
+  * Advances in hardware and software mean that predictions will get cheap, so...
+  * the things around prescriptions get valuable
+  * Data is the new oil
+---
+# R
+  * R makes data comprehendable - data toolkit
+  * R used to be like Perl - dense, feature packed, but obtuse
+    * tidyverse makes it beautiful
+    * but still dense and feature packed!
+---
+# Administrative Medical Data
+  * Australian Medical/Pharmaceutical Benefit Summary  (MBS / PBS)
+  * what can you do with opioids?
+## Technical fun facts - Daily Defined Dose (DDD)
+  * DDD is standardised drug dose (daily dose per 1000 people) 
+  * World Health Organisation.  Used for comparing different types of drugs.  
+  * In opioids, it is the cancer dosage level, so kind've high.  Cancer hurts!
+---
+
+### Fun with Opioids - Boxplot all variable combinations
+```{r , echo=FALSE, fig.cap="Drug category and urbanisation - Australia", out.width = '100%'}
+knitr::include_graphics("boxplot_type_name_urbanization4.png")
+```
+---
+```{r , echo=FALSE, fig.cap="Increasing and Decreasing Opioid Usage for NSW", out.width = '100%'}
+knitr::include_graphics("opioid1.png")
+```
+---
+```{r , echo=FALSE, fig.cap="Regular Opioid users - Years LGA at highest quartile for NSW and VIC", out.width = '80%'}
+knitr::include_graphics("regular.png")
+```
+---
+
+### Fun with Opioids AND the census
+  * Opioids 
+    * DDD (daily defined dose) is a standardised drug measurement
+    * one dataset has total DDD by Local Government Area (LGA)
+  * Census
+    * 15000 categories
+    * also has LGA 
+  * How about joining them together?
+
+---
+# Top 10 Highly Coorelated 2011 Census Variables with Opioid Usage by LGA
+```{r , echo=FALSE}
+
+ read.csv("top_10_census.csv") %>% 
+   mutate( long_name = gsub('_',' ',  substr( long_name, 13,999))) %>% 
+   select( long_name) %>% 
+   rename( `Census Category` = long_name ) %>%
+   kable( )
+
+```
+
+
+---
+# Medical Data Availability
+## Australian Government Generosity
+ * Released 20 years of MBS, 10 years of PBS data
+ * 10% of Australia population
+ * Released under Creative Commons 4.0 license
+ * can also request other data
+
+##Data Heterogenaity
+
+ * 7614 PBS Drugs
+ * 5344 MBS Services 
+
+## Outstanding tricky bits
+ * How can we distribute it?
+ * How to anonymize it?
+
+
