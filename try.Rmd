@@ -7,8 +7,10 @@ output:
 ## Slide One
 
 ## Slide Two
+```{r}
 
-
+devtools::install_github('yihui/xaringan')
+```
 
 
 

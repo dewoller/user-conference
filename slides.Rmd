@@ -1,22 +1,26 @@
 ---
-title: "UseR 2018 - What can you do with drugs? Exploring Pharmaceutical Benefit Scheme prescription drug usage using R"
+title: "What can you do with drugs? Exploring Pharmaceutical Benefit Scheme prescription drug usage using R"
 author: Dennis Wollersheim, Health Information Management, La Trobe University, Melbourne VIC Australia
 date:  July 13, 2018
 output:
     xaringan::moon_reader
 ---
+
 #Data is beautiful
   * So much data!
   * Advances in hardware and software mean that predictions will get cheap, so...
-  * the things around prescriptions get valuable
+  * the things 'around' prescriptions will get valuable
   * Data is the new oil
+  * we are the oil drillers, the road builders, the car manufacturers
 ---
+
 # R
   * R makes data comprehendable - data toolkit
-  * R used to be like Perl - dense, feature packed, but obtuse
+  * R used to be like Perl - dense, feature packed, imcomprehendable
     * tidyverse makes it beautiful
     * but still dense and feature packed!
 ---
+
 # Administrative Medical Data
   * Australian Medical/Pharmaceutical Benefit Summary  (MBS / PBS)
   * what can you do with opioids?
@@ -26,27 +30,27 @@ output:
   * In opioids, it is the cancer dosage level, so kind've high.  Cancer hurts!
 ---
 
-### Fun with Opioids - Boxplot all variable combinations
-```{r , echo=FALSE, fig.cap="Drug category and urbanisation - Australia", out.width = '100%'}
-knitr::include_graphics("boxplot_type_name_urbanization4.png")
-```
----
 ```{r , echo=FALSE, fig.cap="Increasing and Decreasing Opioid Usage for NSW", out.width = '100%'}
 knitr::include_graphics("opioid1.png")
 ```
 ---
+
 ```{r , echo=FALSE, fig.cap="Regular Opioid users - Years LGA at highest quartile for NSW and VIC", out.width = '80%'}
 knitr::include_graphics("regular.png")
 ```
 ---
 
-### Fun with Opioids AND the census
-  * Opioids 
-    * DDD (daily defined dose) is a standardised drug measurement
-    * one dataset has total DDD by Local Government Area (LGA)
-  * Census
-    * 15000 categories
-    * also has LGA 
+### Fun with Opioids (1) - Boxplot all variable combinations
+```{r , echo=FALSE, fig.cap="Drug category and urbanisation - Australia", out.width = '100%'}
+knitr::include_graphics("boxplot_type_name_urbanization4.png")
+```
+---
+
+### Fun with Opioids (2) the Census
+  * Opioids  
+    * DDD x Local Government Area (LGA)
+  * Census 
+    * 15000 categories x LGA 
   * How about joining them together?
 
 ---
@@ -60,6 +64,10 @@ knitr::include_graphics("regular.png")
    kable( )
 
 ```
+---
+# How do people take their pills?
+* what is relationship of prescribing data to consumption?
+
 
 
 ---

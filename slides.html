@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
   <head>
-    <title>UseR 2018 - What can you do with drugs? Exploring Pharmaceutical Benefit Scheme prescription drug usage using R</title>
+    <title>What can you do with drugs? Exploring Pharmaceutical Benefit Scheme prescription drug usage using R</title>
     <meta charset="utf-8">
     <meta name="author" content="Dennis Wollersheim, Health Information Management, La Trobe University, Melbourne VIC Australia" />
     <meta name="date" content="2018-07-13" />
@@ -12,24 +12,28 @@
     <textarea id="source">
 class: center, middle, inverse, title-slide
 
-# UseR 2018 - What can you do with drugs? Exploring Pharmaceutical Benefit Scheme prescription drug usage using R
+# What can you do with drugs? Exploring Pharmaceutical Benefit Scheme prescription drug usage using R
 ### Dennis Wollersheim, Health Information Management, La Trobe University, Melbourne VIC Australia
 ### July 13, 2018
 
 ---
 
+
 #Data is beautiful
   * So much data!
   * Advances in hardware and software mean that predictions will get cheap, so...
-  * the things around prescriptions get valuable
+  * the things 'around' prescriptions will get valuable
   * Data is the new oil
+  * we are the oil drillers, the road builders, the car manufacturers
 ---
+
 # R
   * R makes data comprehendable - data toolkit
-  * R used to be like Perl - dense, feature packed, but obtuse
+  * R used to be like Perl - dense, feature packed, imcomprehendable
     * tidyverse makes it beautiful
     * but still dense and feature packed!
 ---
+
 # Administrative Medical Data
   * Australian Medical/Pharmaceutical Benefit Summary  (MBS / PBS)
   * what can you do with opioids?
@@ -39,30 +43,30 @@ class: center, middle, inverse, title-slide
   * In opioids, it is the cancer dosage level, so kind've high.  Cancer hurts!
 ---
 
-### Fun with Opioids - Boxplot all variable combinations
-&lt;div class="figure"&gt;
-&lt;img src="boxplot_type_name_urbanization4.png" alt="Drug category and urbanisation - Australia" width="100%" /&gt;
-&lt;p class="caption"&gt;Drug category and urbanisation - Australia&lt;/p&gt;
-&lt;/div&gt;
----
 &lt;div class="figure"&gt;
 &lt;img src="opioid1.png" alt="Increasing and Decreasing Opioid Usage for NSW" width="100%" /&gt;
 &lt;p class="caption"&gt;Increasing and Decreasing Opioid Usage for NSW&lt;/p&gt;
 &lt;/div&gt;
 ---
+
 &lt;div class="figure"&gt;
 &lt;img src="regular.png" alt="Regular Opioid users - Years LGA at highest quartile for NSW and VIC" width="80%" /&gt;
 &lt;p class="caption"&gt;Regular Opioid users - Years LGA at highest quartile for NSW and VIC&lt;/p&gt;
 &lt;/div&gt;
 ---
 
-### Fun with Opioids AND the census
-  * Opioids 
-    * DDD (daily defined dose) is a standardised drug measurement
-    * one dataset has total DDD by Local Government Area (LGA)
-  * Census
-    * 15000 categories
-    * also has LGA 
+### Fun with Opioids (1) - Boxplot all variable combinations
+&lt;div class="figure"&gt;
+&lt;img src="boxplot_type_name_urbanization4.png" alt="Drug category and urbanisation - Australia" width="100%" /&gt;
+&lt;p class="caption"&gt;Drug category and urbanisation - Australia&lt;/p&gt;
+&lt;/div&gt;
+---
+
+### Fun with Opioids (2) the Census
+  * Opioids  
+    * DDD x Local Government Area (LGA)
+  * Census 
+    * 15000 categories x LGA 
   * How about joining them together?
 
 ---
@@ -80,6 +84,10 @@ class: center, middle, inverse, title-slide
 |Separate house Three bedrooms Number of persons usually resident in family households Two |
 |Total Number of persons usually resident in family households Two                         |
 |Separate house Family households Couple family with no children                           |
+---
+# How do people take their pills?
+* what is relationship of prescribing data to consumption?
+
 
 
 ---

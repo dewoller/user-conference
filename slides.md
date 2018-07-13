@@ -1,22 +1,26 @@
 ---
-title: "UseR 2018 - What can you do with drugs? Exploring Pharmaceutical Benefit Scheme prescription drug usage using R"
+title: "What can you do with drugs? Exploring Pharmaceutical Benefit Scheme prescription drug usage using R"
 author: Dennis Wollersheim, Health Information Management, La Trobe University, Melbourne VIC Australia
 date:  July 13, 2018
 output:
     xaringan::moon_reader
 ---
+
 #Data is beautiful
   * So much data!
   * Advances in hardware and software mean that predictions will get cheap, so...
-  * the things around prescriptions get valuable
+  * the things 'around' prescriptions will get valuable
   * Data is the new oil
+  * we are the oil drillers, the road builders, the car manufacturers
 ---
+
 # R
   * R makes data comprehendable - data toolkit
-  * R used to be like Perl - dense, feature packed, but obtuse
+  * R used to be like Perl - dense, feature packed, imcomprehendable
     * tidyverse makes it beautiful
     * but still dense and feature packed!
 ---
+
 # Administrative Medical Data
   * Australian Medical/Pharmaceutical Benefit Summary  (MBS / PBS)
   * what can you do with opioids?
@@ -26,21 +30,21 @@ output:
   * In opioids, it is the cancer dosage level, so kind've high.  Cancer hurts!
 ---
 
-### Fun with Opioids - Boxplot all variable combinations
-<img src="boxplot_type_name_urbanization4.png" title="Drug category and urbanisation - Australia" alt="Drug category and urbanisation - Australia" width="100%" />
----
 <img src="opioid1.png" title="Increasing and Decreasing Opioid Usage for NSW" alt="Increasing and Decreasing Opioid Usage for NSW" width="100%" />
 ---
+
 <img src="regular.png" title="Regular Opioid users - Years LGA at highest quartile for NSW and VIC" alt="Regular Opioid users - Years LGA at highest quartile for NSW and VIC" width="80%" />
 ---
 
-### Fun with Opioids AND the census
-  * Opioids 
-    * DDD (daily defined dose) is a standardised drug measurement
-    * one dataset has total DDD by Local Government Area (LGA)
-  * Census
-    * 15000 categories
-    * also has LGA 
+### Fun with Opioids (1) - Boxplot all variable combinations
+<img src="boxplot_type_name_urbanization4.png" title="Drug category and urbanisation - Australia" alt="Drug category and urbanisation - Australia" width="100%" />
+---
+
+### Fun with Opioids (2) the Census
+  * Opioids  
+    * DDD x Local Government Area (LGA)
+  * Census 
+    * 15000 categories x LGA 
   * How about joining them together?
 
 ---
@@ -58,6 +62,10 @@ output:
 |Separate house Three bedrooms Number of persons usually resident in family households Two |
 |Total Number of persons usually resident in family households Two                         |
 |Separate house Family households Couple family with no children                           |
+---
+# How do people take their pills?
+* what is relationship of prescribing data to consumption?
+
 
 
 ---
